@@ -1,0 +1,304 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+
+
+body.invoice header{
+    background: #3B2D4F;
+    min-height: 218px;
+}
+body.invoice .container{
+    width: 768px;
+    margin: 0 auto;
+}
+body.invoice .block-on-header{
+    padding-top: 65px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 50px;
+}
+/* right-block */
+.right-block-title{
+    margin-bottom: 6px;
+    font-family: Lato;
+font-style: normal;
+font-weight: 900;
+font-size: 36px;
+line-height: 43px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.right-block-invoice-number{
+    font-family: Lato;
+font-style: normal;
+margin-bottom: 10px;
+font-weight: normal;
+font-size: 15px;
+line-height: 18px;
+color: #FFFFFF;
+}
+.right-block-date{
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+display: inline-block;
+line-height: 20px;
+color: #FFFFFF;
+opacity: 0.6;
+}
+.right-block-date-issue{
+    font-family: Lato;
+font-style: normal;
+font-weight: normal;
+display: inline-block;
+font-size: 14px;
+line-height: 20px;
+color: #FFFFFF;
+}
+/* right-block */
+
+/* left-block */
+.left-block-title {
+    max-width: 266px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+}
+.left-block-description {
+    max-width: 217px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+/* left-block */
+
+
+section.one{
+     background: #F8F7FA;
+}
+section.one .billing-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+section.one ul li {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+    list-style: none;
+    line-height: 16px;
+    color: #777777;
+}
+section.one ul {
+    padding: 0px;
+}
+section.one .billing-info-tittle {
+    font-family: Lato;
+font-style: normal;
+font-weight: 900;
+font-size: 14px;
+line-height: 17px;
+color: #212121;
+}
+section.two .header-info-block {
+    margin-top: 50px;
+    display: grid;
+    align-items: center;
+    padding: 0 20px;
+    grid-template-columns: 5fr 1fr 1fr;
+    height: 56px;
+    background: linear-gradient(
+90deg
+, #733189 1.41%, #E84E89 100%);
+font-family: Lato;
+font-style: normal;
+font-weight: 900;
+font-size: 14px;
+color: #fff;
+}
+section.two .header-order-block{
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    min-height: 48px;
+    padding: 0 20px;
+    align-items: center;
+    background: #F8F7FA;
+}
+
+section.two .total {
+    float: right;
+    margin-top: 55px;
+    margin-right: 50px;
+}
+
+section.two .total span {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #212121;
+    margin-right: 20px;
+}
+section.two .total b{
+    font-family: Lato;
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 19px;
+color: #212121;
+}
+footer {
+    background: #3B2D4F;
+    height: 92px;
+    align-items: center;
+    display: flex;
+}
+section.two {
+    min-height: 400px;
+}
+
+footer .need-help{
+    color: #EA5289;
+}
+footer .footer-block{
+        display: grid;
+        grid-template-columns: 0.5fr 1.1fr 1.1fr;
+}
+footer .manager-contackt, .finance-depor{
+    font-family: Lato;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #FFFFFF;
+text-align: center;
+}
+@media(max-width:768px){
+    body.invoice .container{
+        width: calc(100% - 20px);
+    }
+}
+@media(max-width:465px){
+    body.invoice .block-on-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    body.invoice .block-on-header .left-block {
+        order: 2;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    section.one .billing-info {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: center;
+    }
+    footer .footer-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+}
